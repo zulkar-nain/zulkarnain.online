@@ -40,6 +40,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 img {
@@ -59,8 +60,8 @@ a {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(94, 231, 255, 0.6);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(94, 231, 255, 0.45);
 }
 
 .site-shell {
