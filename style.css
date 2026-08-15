@@ -259,6 +259,14 @@ h2 {
   background: var(--card);
 }
 
+.whatsapp-number {
+  display: none;
+}
+
+.whatsapp-number.is-visible {
+  display: inline-flex;
+}
+
 .button--icon {
   background: var(--card-strong);
 }

@@ -3,6 +3,8 @@ const themeToggle = document.querySelector('.theme-toggle');
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const yearElement = document.getElementById('year');
+const whatsappReveal = document.getElementById('whatsapp-reveal');
+const whatsappNumber = document.getElementById('whatsapp-number');
 
 const applyTheme = (theme) => {
   let selectedTheme = theme;
@@ -56,6 +58,15 @@ const setMenuState = (isOpen) => {
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
+}
+
+if (whatsappReveal && whatsappNumber) {
+  whatsappReveal.addEventListener('click', () => {
+    const isRevealed = whatsappReveal.getAttribute('aria-expanded') === 'true';
+    whatsappReveal.setAttribute('aria-expanded', String(!isRevealed));
+    whatsappNumber.classList.toggle('is-visible', !isRevealed);
+    whatsappNumber.setAttribute('aria-hidden', String(isRevealed));
+  });
 }
 
 applyTheme();
