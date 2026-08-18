@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A private directory of birthday wishes." />
+    <meta name="description" content="A small celebration board for birthday wishes." />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#0d1113" />
     <link rel="icon" type="image/png" href="../assets/icons/zn-icon.png" />
@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="birthday.css" />
-    <title>Birthday Archive | Zulkar Nain</title>
+    <title>Birthday Board | Zulkar Nain</title>
   </head>
   <body>
     <div class="birthday-shell">
       <header class="birthday-header">
         <a class="birthday-brand" href="../" aria-label="Return to Zulkar Nain's portfolio">
           <span class="birthday-brand__mark">ZN</span>
-          <span>Private archive</span>
+          <span>Birthday board</span>
         </a>
         <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
           <span aria-hidden="true">☀︎</span>
@@ -27,17 +27,43 @@
 
       <main>
         <section class="directory-intro fade-in">
-          <p class="kicker">birthdaywish / index</p>
-          <h1>The birthday department.</h1>
-          <p class="intro-copy">A highly unofficial archive of people who deserve cake, questionable jokes, and at least one dramatic paragraph.</p>
-          <div class="archive-note"><span aria-hidden="true">⌁</span> No public link. Just the URL and good intentions.</div>
+          <p class="kicker">birthdaywish / board</p>
+          <h1>A small corner for big celebrations.</h1>
+          <p class="intro-copy">A personal reminder board for the people who make life better. Every name here is included with care, good wishes, and a standing invitation to have cake.</p>
+          <div class="archive-note"><span aria-hidden="true">⌁</span> Built for remembering. Shared with kindness.</div>
+        </section>
+
+        <section class="board-overview fade-in" aria-label="Birthday board overview">
+          <article class="overview-card">
+            <span class="overview-card__icon" aria-hidden="true">✦</span>
+            <span class="overview-card__value">0</span>
+            <span class="overview-card__label">Celebrations listed</span>
+          </article>
+          <article class="overview-card overview-card--warm">
+            <span class="overview-card__icon" aria-hidden="true">♡</span>
+            <span class="overview-card__value">∞</span>
+            <span class="overview-card__label">Good wishes available</span>
+          </article>
+          <article class="overview-card">
+            <span class="overview-card__icon" aria-hidden="true">→</span>
+            <span class="overview-card__value">Soon</span>
+            <span class="overview-card__label">Next excuse for cake</span>
+          </article>
         </section>
 
         <section class="directory-section" aria-labelledby="directory-heading">
           <div class="section-label fade-in">
-            <p class="kicker">Currently added</p>
-            <h2 id="directory-heading">The lucky humans</h2>
+            <div>
+              <p class="kicker">The celebration list</p>
+              <h2 id="directory-heading">People worth celebrating</h2>
+            </div>
+            <span class="section-count">0 listed</span>
           </div>
+
+          <aside class="respect-note fade-in">
+            <span class="respect-note__icon" aria-hidden="true">♡</span>
+            <p><strong>A little note of appreciation</strong><br />This board is simply a way to remember important dates and send thoughtful wishes. No personal details are shared beyond what belongs in a birthday greeting.</p>
+          </aside>
 
           <!-- Add one card below for every birthday page you create. -->
           <div class="birthday-list">
@@ -52,9 +78,9 @@
             </a>
             -->
             <div class="empty-state fade-in">
-              <span class="empty-state__stamp">TODO</span>
-              <p>No birthdays filed yet.</p>
-              <small>Duplicate <strong>personname.html</strong>, personalise it, then add its name to the list in this file.</small>
+              <span class="empty-state__stamp">READY WHEN YOU ARE</span>
+              <p>The celebration list is waiting for its first name.</p>
+              <small>To add someone, duplicate <strong>personname.html</strong>, personalise the wish, then add their card to this board.</small>
             </div>
           </div>
         </section>
