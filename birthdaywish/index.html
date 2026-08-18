@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DD88MCBWYH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DD88MCBWYH');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A small celebration board for birthday wishes." />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#0d1113" />
+    <meta property="og:title" content="Birthday Board | Zulkar Nain" />
+    <meta property="og:description" content="A small corner for big celebrations." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zulkarnain.online/birthdaywish/" />
+    <meta property="og:image" content="https://zulkarnain.online/birthdaywish/images/surprisebanner.png" />
+    <meta property="og:image:alt" content="A surprise birthday banner" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Birthday Board | Zulkar Nain" />
+    <meta name="twitter:description" content="A small corner for big celebrations." />
+    <meta name="twitter:image" content="https://zulkarnain.online/birthdaywish/images/surprisebanner.png" />
     <link rel="icon" type="image/png" href="../assets/icons/zn-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +35,8 @@
   <body>
     <div class="birthday-shell">
       <header class="birthday-header">
-        <a class="birthday-brand" href="../" aria-label="Return to Zulkar Nain's portfolio">
-          <span class="birthday-brand__mark">ZN</span>
+        <a class="birthday-brand" href="./" aria-label="Return to the birthday board">
+          <img class="birthday-brand__logo" src="../assets/icons/zn-icon.png" alt="Zulkar Nain logo" />
           <span>Birthday board</span>
         </a>
         <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
@@ -36,7 +55,7 @@
         <section class="board-overview fade-in" aria-label="Birthday board overview">
           <article class="overview-card">
             <span class="overview-card__icon" aria-hidden="true">✦</span>
-            <span class="overview-card__value">0</span>
+            <span class="overview-card__value">1</span>
             <span class="overview-card__label">Celebrations listed</span>
           </article>
           <article class="overview-card overview-card--warm">
@@ -57,7 +76,7 @@
               <p class="kicker">The celebration list</p>
               <h2 id="directory-heading">People worth celebrating</h2>
             </div>
-            <span class="section-count">0 listed</span>
+            <span class="section-count">1 listed</span>
           </div>
 
           <aside class="respect-note fade-in">
@@ -67,21 +86,14 @@
 
           <!-- Add one card below for every birthday page you create. -->
           <div class="birthday-list">
-            <!--
-            <a class="birthday-entry fade-in" href="personname.html">
-              <span class="birthday-entry__date">DD / MM</span>
+            <a class="birthday-entry fade-in" href="hbdLamima.html">
+              <span class="birthday-entry__date">01 NOV</span>
               <span class="birthday-entry__details">
-                <strong>Person Name</strong>
-                <span>Relationship or tiny descriptor</span>
+                <strong>Syeda Lamima Islam</strong>
+                <span>The love of my life</span>
               </span>
               <span class="birthday-entry__arrow" aria-hidden="true">↗</span>
             </a>
-            -->
-            <div class="empty-state fade-in">
-              <span class="empty-state__stamp">READY WHEN YOU ARE</span>
-              <p>The celebration list is waiting for its first name.</p>
-              <small>To add someone, duplicate <strong>personname.html</strong>, personalise the wish, then add their card to this board.</small>
-            </div>
           </div>
         </section>
       </main>
