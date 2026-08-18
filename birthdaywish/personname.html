@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A birthday wish for Person Name." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0d1113" />
+    <link rel="icon" type="image/png" href="../assets/icons/zn-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="birthday.css" />
+    <title>Happy Birthday, Person Name!</title>
+  </head>
+  <body class="wish-page">
+    <div class="birthday-shell">
+      <header class="birthday-header">
+        <a class="birthday-brand" href="./" aria-label="Return to the birthday archive">
+          <span class="birthday-brand__mark">ZN</span>
+          <span>Birthday department</span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <span aria-hidden="true">☀︎</span>
+        </button>
+      </header>
+
+      <main class="wish-main">
+        <section class="wish-hero fade-in">
+          <div class="wish-hero__copy">
+            <p class="kicker">A very important announcement</p>
+            <p class="wish-hero__date">DD / MM / YYYY</p>
+            <!-- EDIT: replace the name in the heading and the title above. -->
+            <h1>Happy birthday, <span>Person Name</span>!</h1>
+            <p class="wish-hero__lead">Today, the universe celebrates the suspiciously good decision it made when it put you on Earth.</p>
+            <div class="wish-hero__tags" aria-label="Birthday status">
+              <span>+1 year of wisdom</span>
+              <span>100% iconic</span>
+              <span>cake pending</span>
+            </div>
+          </div>
+
+          <figure class="portrait-card fade-in">
+            <!-- EDIT: replace this source with the person's photo. Keep the image in assets/profile when possible. -->
+            <img src="../assets/profile/personname.jpg" alt="A favourite photo of Person Name" />
+            <figcaption><span>Evidence of excellence</span><span aria-hidden="true">✦</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="message-panel fade-in" aria-labelledby="message-heading">
+          <div class="message-panel__label">
+            <p class="kicker">Official birthday statement</p>
+            <span class="message-panel__scribble" aria-hidden="true">(read this part)</span>
+          </div>
+          <div class="message-panel__body">
+            <h2 id="message-heading">Dear Person Name,</h2>
+            <!-- EDIT: replace the paragraphs below with your personal message. -->
+            <p>
+              Happy birthday to one of the rare people who makes ordinary days feel like something worth remembering. You bring your own kind of energy into every room, and somehow make everything a little more fun, a little more honest, and significantly less boring.
+            </p>
+            <p>
+              I hope this next chapter brings you the things you have been quietly wishing for, the courage to chase the things you have not said out loud yet, and enough good food to make every problem temporarily theoretical.
+            </p>
+            <p class="message-signoff">Stay wonderful. Stay impossible to replace.<br /><strong>With love,</strong><br />Zulkar</p>
+          </div>
+        </section>
+
+        <section class="wish-footer fade-in">
+          <p><span aria-hidden="true">↳</span> Please accept this webpage as a legally binding excuse to eat dessert first.</p>
+          <a class="text-link" href="./">Back to the archive <span aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+
+      <footer class="birthday-footer">
+        <span>Filed under: people worth celebrating</span>
+        <span aria-hidden="true">✦</span>
+      </footer>
+    </div>
+    <script src="birthday.js"></script>
+  </body>
+</html>
