@@ -1,0 +1,16 @@
+In this work, focused on multi-class emotion recognition on the Text Emotion
+dataset of ∼106,000 English sentences annotated with 11 emotions. A number
+of pretrained transformer encoders in particular DistilBERT-base, BERT-base
+and RoBERTa-base are fine-tuned and compared with classic as well as ensemble
+baselines such as k-NN, logistic regression, naive Bayes classifiers, decision trees
+AdaBoost and gradient boosting. All models are trained by subword tokeniza
+tion and supervised cross-entropy, evaluated with accuracy, weighted precision,
+recall, F1-score and confusion matrices. DistilBERT-base attains the highest
+performances overall 0.89 in terms of accuracy, 0.89 weighted F1-score on the
+test set and yields a lower computational budget as compared to the larger
+counterparts. Per-class results demonstrate high robustness on frequent emo
+tions neutral, enthusiasm, hate and relief and solid effort for challenging classes,
+making lightweight transformers feasible to real-world applications.
+
+Keywords: emotion recognition, text emotion classification, transformer models,
+DistilBERT, efficient NLP, social media analytics, sentiment analysis.

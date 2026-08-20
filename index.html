@@ -238,6 +238,7 @@
                   <em>Presented at ICECI 2026, IEEE; online copy pending.</em>
                   <div class="publication-item__actions">
                     <a class="button button--primary" href="https://github.com/zulkar-nain/Diabetic-Retinopathy-Screening" target="_blank" rel="noreferrer">Codebase</a>
+                    <button class="button button--ghost abstract-trigger" type="button" data-abstract-target="abstract-vitamin-xai" data-abstract-title="ViTamin-XAI: A Hybrid Vision-Transformer Network with Local Interpretable Model-Agnostic Explanations for Robust and Interpretable Diabetic Retinopathy Screening">See Abstract</button>
                   </div>
                 </li>
                 <li>
@@ -252,6 +253,7 @@
                   <em>Presented at ICBDAIA 2026; online copy pending.</em>
                   <div class="publication-item__actions">
                     <a class="button button--primary" href="https://github.com/zulkar-nain/Eleven-Way-Emotion-Classification" target="_blank" rel="noreferrer">Codebase</a>
+                    <button class="button button--ghost abstract-trigger" type="button" data-abstract-target="abstract-teaching-machines" data-abstract-title="Teaching Machines to Feel Faster: DistilBERT for Eleven-Way Emotion Classification">See Abstract</button>
                   </div>
                 </li>
               </ul>
@@ -273,6 +275,7 @@
                   <div class="publication-item__actions">
                     <a class="button button--primary" href="https://github.com/zulkar-nain/Unified-Dense-Attention-Framework" target="_blank" rel="noreferrer">Codebase</a>
                     <a href="https://www.researchgate.net/publication/410612940_UniFusion_Unified_dense-attention_framework_for_efficient_multimodal_medical_image_fusion_in_brain_tumor_classification" target="_blank" rel="noreferrer">Preprint</a>
+                    <button class="button button--ghost abstract-trigger" type="button" data-abstract-target="abstract-unifusion" data-abstract-title="UniFusion: Unified Dense-Attention Framework for Efficient Multimodal Medical Image Fusion in Brain Tumor Classification">See Abstract</button>
                   </div>
                 </li>
                 <li>
@@ -287,6 +290,7 @@
                   <em>Accepted with minor revision — Scientific Reports (Nature)</em>
                   <div class="publication-item__actions">
                     <a class="button button--primary" href="https://github.com/zulkar-nain/Cervical-Cancer-Cell-Classification-on-Pap-Smear-Images" target="_blank" rel="noreferrer">Codebase</a>
+                    <button class="button button--ghost abstract-trigger" type="button" data-abstract-target="abstract-attention-gated-densenet" data-abstract-title="Attention-Gated DenseNet with Class-Weighted Focal Loss for Multi-Class Cervical Cancer Cell Classification on Pap-Smear Images">See Abstract</button>
                   </div>
                 </li>
               </ul>
@@ -321,6 +325,35 @@
             </div>
           </div>
         </section>
+
+        <div class="abstract-modal" id="abstract-modal" aria-hidden="true">
+          <div class="abstract-modal__backdrop" data-abstract-close></div>
+          <div class="abstract-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="abstract-modal-title">
+            <button class="abstract-modal__close" type="button" data-abstract-close aria-label="Close abstract">&times;</button>
+            <p class="eyebrow">Abstract</p>
+            <h3 id="abstract-modal-title"></h3>
+            <div class="abstract-modal__body" id="abstract-modal-body"></div>
+          </div>
+        </div>
+
+        <template id="abstract-vitamin-xai">
+          <p>Diabetic Retinopathy (DR) remains a leading cause of preventable blindness globally. While deep learning has achieved expert-level performance in diagnosis, the “black-box” nature of these models hinders clinical adoption. Furthermore, pure Vision Transformers (ViTs) often require massive datasets to learn local features efficiently. This paper introduces ViTaminXAI, a novel framework leveraging the ViTamin architecture — a hybrid model combining Mobile Convolution Blocks (MBConv) and Transformer blocks — to achieve state-of-the-art performance in binary DR classification. We integrate Local Interpretable Model-agnostic Explanations (LIME) to provide pixel-level interpretability through perturbation-based analysis. Experimental results on an augmented retinal dataset demonstrate a validation accuracy of 99.44%, with a test accuracy of 99.44%, significantly outperforming traditional CNN baselines. The LIME visualizations validate that the model correctly identifies pathological features such as microaneurysms and hemorrhages, ensuring transparency and trustworthiness for medical deployment. The model contains 86.98 million trainable parameters and converges in approximately 7.14 hours on dual-GPU hardware.</p>
+          <p class="abstract-modal__keywords"><strong>Index Terms:</strong> Diabetic Retinopathy, Vision Transformers, Hybrid Architecture, Explainable AI, LIME, Deep Learning, Medical Image Analysis.</p>
+        </template>
+
+        <template id="abstract-teaching-machines">
+          <p>In this work, focused on multi-class emotion recognition on the Text Emotion dataset of ~106,000 English sentences annotated with 11 emotions. A number of pretrained transformer encoders — in particular DistilBERT-base, BERT-base and RoBERTa-base — are fine-tuned and compared with classic as well as ensemble baselines such as k-NN, logistic regression, naive Bayes classifiers, decision trees, AdaBoost and gradient boosting. All models are trained by subword tokenization and supervised cross-entropy, evaluated with accuracy, weighted precision, recall, F1-score and confusion matrices. DistilBERT-base attains the highest performance overall — 0.89 accuracy, 0.89 weighted F1-score on the test set — and yields a lower computational budget compared to the larger counterparts. Per-class results demonstrate high robustness on frequent emotions (neutral, enthusiasm, hate and relief) and solid effort for challenging classes, making lightweight transformers feasible for real-world applications.</p>
+          <p class="abstract-modal__keywords"><strong>Keywords:</strong> emotion recognition, text emotion classification, transformer models, DistilBERT, efficient NLP, social media analytics, sentiment analysis.</p>
+        </template>
+
+        <template id="abstract-unifusion">
+          <p>Deep learning-based brain tumor classification benefits substantially from fusing complementary diagnostic information from CT and MRI scans, but current state-of-the-art methods are limited by large parameter counts (&gt;8M), slow inference (&gt;70ms per image), and training instability from adversarial optimization. We introduce UniFusion, a parameter-efficient convolutional neural network that leverages dense connectivity for improved gradient flow, incorporates a dual-channel Convolutional Block Attention Module (CBAM) for spatial-channel feature refinement, and utilizes multi-strategy fusion combining maximum, additive, and learned adaptive weighting operations. UniFusion was rigorously evaluated on 4,318 paired CT-MRI brain images (stratified by patient: 70% training, 15% validation, 15% test) aggregated from the Cancer Imaging Archive, BraTS2021, and institutional cohorts (IRB Protocol #2024-AI-378). In systematic comparisons against four representative models (UNetFusion, Temporal Decomposition Network, ResNetFusion, DeepFuse) under uniform training protocols, UniFusion achieved 95.67% test accuracy (95% CI: 93.84–97.50%), 96.15% precision, 95.24% recall, and 95.69% F1-score — statistically equivalent to the most recent state-of-the-art (McNemar's test, p = 0.78) — while reducing parameters by 50.4% (4.24M vs. 8.55M), accelerating inference by 38.7% (46ms vs. 75ms on NVIDIA Tesla P100), and ensuring stable training without adversarial complexity. Ablation studies demonstrate synergistic architectural contributions: dense connectivity (91.82% baseline accuracy), CBAM attention (+3.41%), and multi-strategy fusion (+0.44%). These results establish UniFusion as a clinically deployable solution for robust, real-time multimodal brain tumor classification.</p>
+        </template>
+
+        <template id="abstract-attention-gated-densenet">
+          <p>Cervical cancer remains a leading cause of cancer-related mortality among women worldwide, despite being largely preventable through early cytological screening. The Papanicolaou (Pap) smear test is the cornerstone of cervical-cancer screening programs but is constrained by labor-intensive manual interpretation, inter-observer variability, and a non-trivial false-negative rate. Computer-aided diagnosis (CAD) systems built upon deep convolutional neural networks (CNNs) offer a promising solution, but existing approaches typically rely on either heavy parameter-rich backbones unsuited for deployment in resource-constrained settings, or use loss functions that treat all training samples equivalently and therefore fail to address inherent difficulty variation across cervical-cell morphologies. In this work, we propose a lightweight Attention-Gated DenseNet121 (AG-DenseNet) trained with a Class-Weighted Focal Loss (CW-FL) for fine-grained classification of cervical cells into five clinically meaningful categories. We integrate Convolutional Block Attention Module (CBAM)-style channel- and spatial-attention gates after each dense block of DenseNet121, introducing fewer than 0.15 million additional parameters while explicitly suppressing background clutter and amplifying nucleus–cytoplasm regions critical for cytological grading. We adopt a class-weighted focal loss formulation that combines inverse-frequency alpha-balancing with a focusing parameter, jointly down-weighting easy examples and steering optimization toward morphologically ambiguous classes. Experiments on the SIPaKMeD dataset comprising 4,049 single-cell images demonstrate that the proposed method attains a test accuracy of 97.20%, a macro-F1 of 97.22%, Cohen's kappa of 0.9650, Matthews correlation coefficient of 0.9651, and a macro one-versus-rest area-under-ROC of 0.9988, while requiring only 7.26 million parameters. The model achieves perfect classification of Parabasal cells and exceeds 98% AUC on every class. Calibration analysis yields an expected calibration error of 0.0417, indicating well-calibrated confidence estimates suitable for clinical triage. Qualitative attention-map evidence confirms that the proposed gating mechanism concentrates on diagnostically relevant cellular regions. The framework offers a favorable accuracy-efficiency trade-off and constitutes a practical building block for automated cervical-cancer screening pipelines.</p>
+          <p class="abstract-modal__keywords"><strong>Keywords:</strong> cervical cancer, Pap smear, SIPaKMeD, deep learning, DenseNet, attention mechanism, focal loss, medical image classification.</p>
+        </template>
 
         <section id="projects" class="section projects">
           <div class="section-heading fade-in">

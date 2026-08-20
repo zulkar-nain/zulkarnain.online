@@ -121,3 +121,48 @@ window.addEventListener('resize', () => {
     setMenuState(false);
   }
 });
+
+const abstractModal = document.getElementById('abstract-modal');
+const abstractModalTitle = document.getElementById('abstract-modal-title');
+const abstractModalBody = document.getElementById('abstract-modal-body');
+let lastAbstractTrigger = null;
+
+const closeAbstractModal = () => {
+  if (!abstractModal) return;
+  abstractModal.classList.remove('is-open');
+  abstractModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  if (lastAbstractTrigger) {
+    lastAbstractTrigger.focus();
+    lastAbstractTrigger = null;
+  }
+};
+
+const openAbstractModal = (trigger) => {
+  const template = document.getElementById(trigger.dataset.abstractTarget);
+  if (!abstractModal || !template) return;
+  abstractModalTitle.textContent = trigger.dataset.abstractTitle || '';
+  abstractModalBody.replaceChildren(template.content.cloneNode(true));
+  abstractModal.classList.add('is-open');
+  abstractModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  lastAbstractTrigger = trigger;
+  abstractModal.querySelector('.abstract-modal__close')?.focus();
+};
+
+document.querySelectorAll('.abstract-trigger').forEach((trigger) => {
+  trigger.addEventListener('click', () => openAbstractModal(trigger));
+});
+
+if (abstractModal) {
+  abstractModal.querySelectorAll('[data-abstract-close]').forEach((element) => {
+    element.addEventListener('click', closeAbstractModal);
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && abstractModal?.classList.contains('is-open')) {
+    closeAbstractModal();
+  }
+});
+
