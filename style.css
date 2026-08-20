@@ -172,6 +172,32 @@ body[data-theme="light"] .site-header {
   padding-top: 3rem;
 }
 
+.error-page {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.error-page__lead {
+  font-size: clamp(1.04rem, 2vw, 1.3rem);
+  color: var(--muted);
+  margin-bottom: 1rem;
+  max-width: 560px;
+}
+
+.error-page__art {
+  position: relative;
+  min-height: 380px;
+  border-radius: 2rem;
+  background: var(--card-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -863,6 +889,7 @@ body[data-theme="light"] .abstract-modal__backdrop {
 
 @media (max-width: 940px) {
   .hero,
+  .error-page,
   .about__content,
   .research__hero,
   .project-grid,
@@ -871,7 +898,8 @@ body[data-theme="light"] .abstract-modal__backdrop {
     grid-template-columns: 1fr;
   }
 
-  .hero__art {
+  .hero__art,
+  .error-page__art {
     min-height: 320px;
   }
 }
@@ -973,6 +1001,11 @@ body[data-theme="light"] .abstract-modal__backdrop {
   }
 
   .hero {
+    min-height: auto;
+    padding-top: 1.5rem;
+  }
+
+  .error-page {
     min-height: auto;
     padding-top: 1.5rem;
   }

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /birthdaywish/
+
+Sitemap: https://zulkarnain.online/sitemap.xml
