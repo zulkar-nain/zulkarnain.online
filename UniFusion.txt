@@ -1,0 +1,22 @@
+Deep learning-based brain tumor classification benefits substantially from fusing
+complementary diagnostic information from CT and MRI scans, but current
+state-of-the-art methods are limited b y large parameter counts (>8M), slow inference
+(>70ms per image), and training instability from adversarial optimization. W e
+introduce UniFusion, a parameter-efficient convolutional neural network that leverages
+dense connectivity for improved gradient flow, incorporates a dual-channel
+Convolutional Block Attention Module (CBAM) for spatial-channel feature refinement,
+and utilizes multi-strategy fusion combining maximum, additive, and learned adaptive
+weighting operations. UniFusion w a s rigorously evaluated on 4,318 paired CT-MRI
+brain images (stratified b y patient: 70% training, 15% validation, 15% test) aggregated
+from the Cancer Imaging Archive, BraTS2021, and institutional cohorts (IRB Protocol
+#2024-AI-378). In systematic comparisons against four representative models
+(UNetFusion, Temporal Decomposition Network, ResNetFusion, DeepFuse) under
+uniform training protocols, UniFusion achieved 95.67% test accuracy (95% CI:
+93.84–97.50%), 96.15% precision, 95.24% recall, and 95.69% F1-score—statistically
+equivalent to the most recent state-of-the-art (McNemar’s test, p = 0.78)—while
+reducing parameters b y 50.4% (4.24M vs. 8.55M), accelerating inference b y 38.7%
+(46ms vs. 75ms on NVIDIA Tesla P100), and ensuring stable training without
+adversarial complexity. Ablation studies demonstrate synergistic architectural
+contributions: dense connectivity (91.82% baseline accuracy), CBAM attention
+(+3.41%), and multi-strategy fusion (+0.44%). These results establish UniFusion as a
+clinically deployable solution for robust, real-time multimodal brain tumor classification.

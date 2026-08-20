@@ -1,0 +1,34 @@
+Cervical cancer remains a leading cause of cancer-related mortality among women
+worldwide, despite being largely preventable through early cytological screen
+ing. The Papanicolaou (Pap) smear test is the cornerstone of cervical-cancer
+screening programs but is constrained by labor-intensive manual interpretation,
+inter-observer variability, and a non-trivial false-negative rate. Computer-aided
+diagnosis (CAD) systems built upon deep convolutional neural networks (CNNs)
+offer a promising solution, but existing approaches typically rely on either heavy
+parameter-rich backbones unsuited for deployment in resource-constrained set
+tings, or use loss functions that treat all training samples equivalently and
+therefore fail to address inherent difficulty variation across cervical-cell mor
+phologies. In this work, we propose a lightweight Attention-Gated DenseNet121
+(AG-DenseNet) trained with a Class-Weighted Focal Loss (CW-FL) for fine
+grained classification of cervical cells into five clinically meaningful categories.
+We integrate Convolutional Block Attention Module (CBAM)-style channel-and
+spatial attention gates after each dense block of DenseNet121, introducing fewer
+than 0.15 million additional parameters while explicitly suppressing background
+clutter and amplifying nucleus-cytoplasm regions critical for cytological grading.
+We adopt a class-weighted focal loss formulation that combines inverse-frequency
+alpha-balancing with a focusing parameter, jointly down-weighting easy examples
+and steering optimization toward morphologically ambiguous classes. Experi
+ments on the SIPaKMeD dataset comprising 4,049 single-cell images demonstrate
+that the proposed method attains a test accuracy of 97.20%, a macro-F1 of
+97.22%, Cohen’s kappa of 0.9650, Matthews correlation coefficient of 0.9651, and
+a macro one-versus-rest area-under-ROC of 0.9988, while requiring only 7.26 mil
+lion parameters. The model achieves perfect classification of Parabasal cells and
+exceeds 98% AUC on every class. Calibration analysis yields an expected cali
+bration error of 0.0417, indicating well-calibrated confidence estimates suitable
+for clinical triage. Qualitative attention-map evidence confirms that the pro
+posed gating mechanism concentrates on diagnostically relevant cellular regions.
+The framework offers a favorable accuracy-efficiency trade-off and constitutes a
+practical building block for automated cervical-cancer screening pipelines.
+
+Keywords: cervical cancer, Pap smear, SIPaKMeD, deep learning, DenseNet,
+attention mechanism, focal loss, medical image classification
