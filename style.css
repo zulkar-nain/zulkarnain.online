@@ -838,6 +838,20 @@ body[data-theme="light"] .abstract-modal__backdrop {
   max-width: 780px;
 }
 
+.education__intro {
+  max-width: 780px;
+  color: var(--muted);
+}
+
+.education__pathway {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.education__pathway .education-card {
+  max-width: none;
+}
+
 .education-card__school {
   color: var(--accent);
   text-transform: uppercase;
